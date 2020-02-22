@@ -1,5 +1,6 @@
-const posts = {
+const posts = [
 	{
+		id: 0,
 		title: "For my service dog, who passed away",
 		date: "2020-02-22",
 		message: "You were the first family I ever had who didn't abuse me. You loved me, even when I hated myself and was fed up with you peeing on my carpet. You stopped my suicide attempts. You put your little chin on me every time I felt like there was no one in the world who loved me. I never had to pull you close to me when I was upset, you just knew that I needed you."
@@ -10,14 +11,15 @@ const posts = {
 		+ " I want to say thank you. Thank you for making me believe that I am loved and cared for, and for giving me the family I had never had. Love is infinite. You showed me this, and because of this I will be able to hold you in my heart forever while still loving another dog just as much."
 		+ " Love you always."
 		+ "\n u/olieolieoxenfree"
-		reply: {
+		reply: [
 			{
 				date: "2020-02-22",
 				message: "Beautiful story, sorry for your loss of your service dog."
 			}
-		}
+		]
 	},
 	{
+		id: 1,
 		title: "Don't settle.",
 		date: "2020-02-22",
 		message: "You're selling yourself short."
@@ -28,27 +30,29 @@ const posts = {
 		+ " Strive for more."
 		+ " We both know you're aware of this."
 		+ "\n u/UsernameLeftAtHome",
-		reply: {
+		reply: [
 			{
 				date: "2020-02-22",
 				message: "Thank you for these kind words, I needed to hear something like this."
 			}
-		}
+		]
 	},
 	{
+		id: 2,
 		title: "I don't know how to let you go.",
 		date: "2020-02-21",
 		message: "I can’t keep chasing you. You don’t want my love, all I’m doing is destroying myself, my heart hurts and my soul feels empty. If you loved me you’d want to spend time with me, you’d make the effort no matter how hard it is."
 		+ "It’s hard, I don’t know how to let go. One thing is for sure I never imagined love could hurt this much."
 		+ "\n u/wanderingflower15",
-		reply: {
+		reply: [
 			{
 				date: "2020-02-21",
 				message: "Sometimes it is best to let someone go if you know you will be better off in the end. I hope you are doing well."
 			}
-		}
+		]
 	},
 	{
+		id: 3,
 		title: "Tpday was tough",
 		date: "2020-02-21",
 		message:"Hi baby,\n"
@@ -59,11 +63,11 @@ const posts = {
 		+ " I want to ask you if the dreams ever stop, if I will ever sleep without feeling your warmth next to me at night only to wake up cold and alone. It's hell every morning, but I'm terrified of not seeing you again."
 		+ " I love you so much baby, and I cry every day for the life I know we could have had together."
 		+ " With all my love, \n Rs \n u/letters2_LRB",
-		reply : {
+		reply : [
 			{
 				date: "2020-02-21"
 				message: "This is very moving."
 			}
-		}
+		]
 	}
-}
+]
