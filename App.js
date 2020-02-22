@@ -7,6 +7,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
+import HomeScreen from './screens/HomeScreen';
+import HeartToHeartScreen from './screens/HeartToHeartScreen';
+import ResourcesScreen from './screens/ResourcesScreen';
+import UnsentLettersScreen from './screens/UnsentLettersScreen';
 import useLinking from './navigation/useLinking';
 
 const Stack = createStackNavigator();
