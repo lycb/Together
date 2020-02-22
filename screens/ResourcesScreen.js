@@ -22,12 +22,17 @@ const dialCall3 = () => {
 
 export default function ResourcesScreen() {
   return (
+
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <Text style={styles.screen_title}>Resources</Text>
+
       <OptionButton
         icon="md-desktop"
         label="National Suicide Preventon Lifeline"
         onPress={() => WebBrowser.openBrowserAsync('https://suicidepreventionlifeline.org/')}
       />
+
+
 
       <View style={styles.MainContainer}>
         <TouchableOpacity onPress={dialCall} activeOpacity={0.7} style={styles.button}>
@@ -142,5 +147,10 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     textAlign: 'center',
+  },
+    screen_title: {
+    fontSize: 45,
+    color: 'black',
+    textAlign: 'center'
   },
 });
