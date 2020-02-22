@@ -1,4 +1,4 @@
-export const posts = [
+export let posts = [
 	{
 		id: '0',
 		title: "My Friend is Struggling with Depression",
@@ -15,26 +15,6 @@ export const posts = [
 				id: '02',
 				date: "2020-01-06",
 				message: "Hey, I haven't exactly been in this situation myself but I have worked through depression as well. I think it would help your friend if you just let them know that you are there for them and helped them keep active and participate in activities they like! It helped me when my fiends did that."
-			},
-			{
-				id: '03',
-				date: "2020-01-02",
-				message: "I had a similiar experience with this and I visited my campus counseling center where they were able to help me find a way to talk to my friend while still respecting their boundaries. I recommend giving this a try."
-			},
-			{	
-				id: '04',
-				date: "2020-01-06",
-				message: "Hey, I haven't exactly been in this situation myself but I have worked through depression as well. I think it would help your friend if you just let them know that you are there for them and helped them keep active and participate in activities they like! It helped me when my fiends did that."
-			},
-			{
-				id: '05',
-				date: "2020-01-02",
-				message: "I had a similiar experience with this and I visited my campus counseling center where they were able to help me find a way to talk to my friend while still respecting their boundaries. I recommend giving this a try."
-			},
-			{	
-				id: '06',
-				date: "2020-01-06",
-				message: "Hey, I haven't exactly been in this situation myself but I have worked through depression as well. I think it would help your friend if you just let them know that you are there for them and helped them keep active and participate in activities they like! It helped me when my fiends did that."
 			}
 		]
 	},
@@ -46,38 +26,6 @@ export const posts = [
 		reply: [
 			{
 				id: '11',
-				date: "2020-01-6",
-				message: "Hello, I had a similiar experience! I wasn't sure if I wanted to go to my campuses health services but a friend talked me into it." 
-				+ " It really ended up helping me. One thing that was super nice about it was if they are not the right fit for you, they can refer you to" 
-				+ " some off campus resources like private counseling. I defiently think you should give it a try. I wish you the best luck, remember we are"
-				+ " all in this together. <3"
-			},
-			{
-				id: '12',
-				date: "2020-01-6",
-				message: "Hello, I had a similiar experience! I wasn't sure if I wanted to go to my campuses health services but a friend talked me into it." 
-				+ " It really ended up helping me. One thing that was super nice about it was if they are not the right fit for you, they can refer you to" 
-				+ " some off campus resources like private counseling. I defiently think you should give it a try. I wish you the best luck, remember we are"
-				+ " all in this together. <3"
-			},
-			{
-				id: '13',
-				date: "2020-01-6",
-				message: "Hello, I had a similiar experience! I wasn't sure if I wanted to go to my campuses health services but a friend talked me into it." 
-				+ " It really ended up helping me. One thing that was super nice about it was if they are not the right fit for you, they can refer you to" 
-				+ " some off campus resources like private counseling. I defiently think you should give it a try. I wish you the best luck, remember we are"
-				+ " all in this together. <3"
-			},
-			{
-				id: '14',
-				date: "2020-01-6",
-				message: "Hello, I had a similiar experience! I wasn't sure if I wanted to go to my campuses health services but a friend talked me into it." 
-				+ " It really ended up helping me. One thing that was super nice about it was if they are not the right fit for you, they can refer you to" 
-				+ " some off campus resources like private counseling. I defiently think you should give it a try. I wish you the best luck, remember we are"
-				+ " all in this together. <3"
-			},
-			{
-				id: '15',
 				date: "2020-01-6",
 				message: "Hello, I had a similiar experience! I wasn't sure if I wanted to go to my campuses health services but a friend talked me into it." 
 				+ " It really ended up helping me. One thing that was super nice about it was if they are not the right fit for you, they can refer you to" 
@@ -202,3 +150,7 @@ export const posts = [
 		]
 	}
 ]
+
+export const setPosts = (value) => {
+	posts = value;
+}
