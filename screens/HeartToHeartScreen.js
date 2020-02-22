@@ -1,25 +1,41 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
-// import { posts } from '../mock_data/heart_to_heart_post';
+import { posts } from '../mock_data/heart_to_heart_post';
 
 export default function HeartToHeartScreen() {
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text style={styles.heartToHeart}>💓 to 💓</Text>
         <View style={styles.postsContainer}>
           <View style={styles.posts}>
-            <Text>
-              
-            </Text>
+          <FlatList
+            data={posts}
+            renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+          />
           </View>
         </View>
-      </ScrollView>
     </View>
+  );
+}
+
+function Posts({ title, date, message }) {
+  return (
+    <RectButton style={styles.debug}>
+      <View style={{ flexDirection: 'row' }}>
+        <View>
+          <Text style={styles.optionText}>{title}</Text>
+        </View>
+        <View style={styles.optionTextContainer}>
+          <Text style={styles.optionText}>{date}</Text>
+          <Text>{message}</Text>
+        </View>
+      </View>
+    </RectButton>
   );
 }
 
