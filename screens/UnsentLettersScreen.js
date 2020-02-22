@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -9,20 +9,22 @@ import { posts } from '../mock_data/unsent_Letters';
 export default function UnsentLettersScreen() {
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text style={styles.unsentLetters}> Unsent Letters </Text>
-        <View style={styles.postsContainer}>
-          <View style={styles.posts}>
             <FlatList
               data={posts}
-              renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+              renderItem={({item}) => <Post item={item}></Post>}
             />
-          </View>
-        </View>
-      </ScrollView>
-
-      
     </View>
+  );
+}
+
+function Post({ item }) {
+  return (
+     <View style={styles.posts}> 
+      <Text>{item.title}</Text>
+      <Text>{item.date}</Text>
+      <Text style={styles.message}>{item.message}</Text>
+     </View>
   );
 }
 
@@ -30,43 +32,20 @@ UnsentLettersScreen.navigationOptions = {
   header: null,
 };
 
-function DevelopmentModeNotice() {
-  if (__DEV__) {
-    const learnMoreButton = (
-      <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
-        Learn more
-      </Text>
-    );
-
-    return (
-      <Text style={styles.developmentModeText}>
-        Development mode is enabled: your app will be slower but you can use useful development
-        tools. {learnMoreButton}
-      </Text>
-    );
-  } else {
-    return (
-      <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
-      </Text>
-    );
-  }
-}
-
-function handleLearnMorePress() {
-  WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/workflow/development-mode/');
-}
-
-function handleHelpPress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#dbc2fb',
+  },
+  message: {
+    height: 70,
+    width: 350,
+  },
+  posts: {
+    backgroundColor: '#FDE059',
+    margin: 20,
+    height: 100
   },
   developmentModeText: {
     marginBottom: 20,

@@ -1,4 +1,4 @@
-const posts = [
+export const posts = [
 	{
 		id: 0,
 		title: "For my service dog, who passed away",
@@ -10,7 +10,7 @@ const posts = [
 		+ " I am supposed to adopt a new dog in a few months, but I don't want you to think I'm forgetting about you or replacing you. I just need someone to carry your torch. I can't exist in this world alone now that I've known what it's like to be loved so deeply. I wish you could tell me that that's what you want for me. That's what I would want for you, if I had died first and so I think it's fair to think you'd want the same for me. But knowing that doesn't make any of this much easier."
 		+ " I want to say thank you. Thank you for making me believe that I am loved and cared for, and for giving me the family I had never had. Love is infinite. You showed me this, and because of this I will be able to hold you in my heart forever while still loving another dog just as much."
 		+ " Love you always."
-		+ "\n u/olieolieoxenfree"
+		+ "\n u/olieolieoxenfree",
 		reply: [
 			{
 				date: "2020-02-22",
@@ -53,7 +53,7 @@ const posts = [
 	},
 	{
 		id: 3,
-		title: "Tpday was tough",
+		title: "Today was tough",
 		date: "2020-02-21",
 		message:"Hi baby,\n"
 		+ " It's me again. still miss you lots. I wish you could see how good I'm doing, I know you would be proud of me."
@@ -65,7 +65,7 @@ const posts = [
 		+ " With all my love, \n Rs \n u/letters2_LRB",
 		reply : [
 			{
-				date: "2020-02-21"
+				date: "2020-02-21",
 				message: "This is very moving."
 			}
 		]
