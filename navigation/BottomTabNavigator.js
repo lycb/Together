@@ -21,7 +21,7 @@ export default function BottomTabNavigator({ navigation, route }) {
     component={HeartToHeartScreen}
     options={{
       title: 'Heart To Heart',
-      tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+      tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-heart" />,
     }}
     />
     <BottomTab.Screen
