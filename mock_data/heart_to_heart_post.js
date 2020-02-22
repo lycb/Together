@@ -1,4 +1,4 @@
-const posts = {
+const posts = [
 	{
 		title: "My Friend is Struggling with Depression",
 		date: "2020-01-02",
@@ -67,4 +67,4 @@ const posts = {
 			},
 		}
 	}
-}
+]
