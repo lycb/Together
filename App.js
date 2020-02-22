@@ -30,6 +30,8 @@ export default function App(props) {
         await Font.loadAsync({
           ...Ionicons.font,
           'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+          'lacquer': require('./assets/fonts/Lacquer/Lacquer-Regular.ttf'),
+          'indie-flower': require('./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf'),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -52,6 +54,10 @@ export default function App(props) {
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="HeartToHeart" component={HeartToHeartScreen} />
+            <Stack.Screen name="Resources" component={ResourcesScreen} />
+            <Stack.Screen name="UnsentLetters" component={UnsentLettersScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

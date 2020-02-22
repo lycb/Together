@@ -10,7 +10,7 @@ import { posts } from '../mock_data/heart_to_heart_post';
 export default function HeartToHeartScreen() {
   return (
     <View style={styles.container}>
-        <Text style={styles.heartToHeart}>💓 to 💓</Text>
+        <Text style={styles.heartToHeart}>♥ to ♥</Text>
           <FlatList
             data={posts}
             renderItem={({item}) => <Post item={item}></Post>}
@@ -21,10 +21,14 @@ export default function HeartToHeartScreen() {
 
 function Post({ item }) {
   return (
-     <View style={styles.posts}>
-      <Text>{item.title}</Text>
-      <Text>{item.date}</Text>
-      <Text>{item.message}</Text>
+     <View style={styles.posts} onPress={() => {
+      <Text>YO</Text>
+     }}>
+       <View style={styles.postWrapper}>
+        <Text>{item.title}</Text>
+        <Text>{item.date}</Text>
+        <Text>{item.message}</Text>
+       </View>
      </View>
   );
 }
@@ -76,9 +80,10 @@ const styles = StyleSheet.create({
   },
   posts: {
     backgroundColor: '#FDE059',
-    margin: 10
+    margin: 10,
+    borderRadius: 12,
   },
-  postsContainer: {
+  postWrapper: {
     margin: 10,
   },
   developmentModeText: {
@@ -119,10 +124,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   heartToHeart: {
-    fontSize: 30,
-    color: 'rgba(96,100,109, 1)',
+    fontSize: 50,
+    color: '#1176F6',
     textAlign: 'left',
-    marginLeft: 20
+    marginLeft: 20,
+    fontFamily: 'space-mono',
   },
   tabBarInfoContainer: {
     position: 'absolute',
