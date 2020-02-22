@@ -13,29 +13,13 @@ export default function HeartToHeartScreen() {
         <Text style={styles.heartToHeart}>💓 to 💓</Text>
         <View style={styles.postsContainer}>
           <View style={styles.posts}>
-          <FlatList
-            data={posts}
-            renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
-          />
+            <FlatList
+              data={posts}
+              renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+            />
           </View>
         </View>
     </View>
-  );
-}
-
-function Posts({ title, date, message }) {
-  return (
-    <RectButton style={styles.debug}>
-      <View style={{ flexDirection: 'row' }}>
-        <View>
-          <Text style={styles.optionText}>{title}</Text>
-        </View>
-        <View style={styles.optionTextContainer}>
-          <Text style={styles.optionText}>{date}</Text>
-          <Text>{message}</Text>
-        </View>
-      </View>
-    </RectButton>
   );
 }
 
