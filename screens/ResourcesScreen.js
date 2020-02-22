@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {TouchableOpacity, Linking, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
-import {TouchableOpacity, Linking, Platform } from 'react-native';
 
 const dialCall = () => {
   let phoneNumber = 'telprompt:${1-800-273-8255}'
@@ -31,8 +31,6 @@ export default function ResourcesScreen() {
         label="National Suicide Preventon Lifeline"
         onPress={() => WebBrowser.openBrowserAsync('https://suicidepreventionlifeline.org/')}
       />
-
-
 
       <View style={styles.MainContainer}>
         <TouchableOpacity onPress={dialCall} activeOpacity={0.7} style={styles.button}>
@@ -77,8 +75,6 @@ export default function ResourcesScreen() {
         label="OASIS"
         onPress={() => WebBrowser.openBrowserAsync('https://www.oasis-open.org/org')}
       />
-
-
     </ScrollView>
   );
 }

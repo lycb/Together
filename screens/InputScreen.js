@@ -7,30 +7,27 @@ import { TextInput, Component } from 'react-native';
 
 export default function InputScreen() {
   const [value, onChangeText] = React.useState('UWUOWO');
+  const [value2, onChangeText2] = React.useState('UWUOWO2')
 	return (
-    <View style={styles.container}>
-       
-    	<Text style={styles.screen_title}>New Post</Text>
+	 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+	    <View style={styles.container}> 
+	    	<Text style={styles.screen_title}>New Post</Text>
+	        <Text style={styles.header}>Title</Text>
+			 <TextInput style={styles.txt_input}
+			     onChangeText={text => onChangeText(text)}
+			     value={value}
+			 />
+			 <Text style={styles.header}>Message</Text>
+			 <TextInput style={styles.txt_input}
+			     onChangeText={text => onChangeText2(text)}
+			     value={value2}
+			 />
+		</View>
 
-
-        <Text style={styles.header}>Title</Text>
-
-		 <TextInput style={styles.txt_input}
-		     onChangeText={text => onChangeText(text)}
-		     value={value}
-		 />
-
-		 <Text style={styles.header}>Message</Text>
-
-		 <TextInput style={styles.txt_input}
-		     onChangeText={text => onChangeText(text)}
-		     value={value}
-		 />
-
-	</View>
-
+	</ScrollView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -53,5 +50,26 @@ const styles = StyleSheet.create({
   	fontSize: 45,
     color: '#1176F6',
     textAlign: 'center'
-  }
+  },
+    contentContainer: {
+    paddingTop: 15,
+  },
+  MainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+    //marginBottom: 10
+  },
+  button: {
+    width: '80%',
+    padding: 6,
+    backgroundColor: '#F5AC41',
+    borderRadius: 7,
+  },
+  TextStyle: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+  },
 });
