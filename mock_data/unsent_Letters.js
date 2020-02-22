@@ -1,4 +1,4 @@
-const posts = [
+export const posts = [
 	{
 		id: 0,
 		title: "For my service dog, who passed away",
@@ -53,7 +53,7 @@ const posts = [
 	},
 	{
 		id: 3,
-		title: "Tpday was tough",
+		title: "Today was tough",
 		date: "2020-02-21",
 		message:"Hi baby,\n"
 		+ " It's me again. still miss you lots. I wish you could see how good I'm doing, I know you would be proud of me."
