@@ -22,7 +22,7 @@ const posts = {
 		title: "Tips for seeking advising",
 		date: "2020-01-05",
 		message: "I have been feeling down recently and am not sure if I want to seek help through my college campuses health services. Any tips?",
-		reply: [
+		reply: {
 			{
 				date: "2020-01-6",
 				message: "Hello, I had a similiar experience! I wasn't sure if I wanted to go to my campuses health services but a friend talked me into it." 
@@ -30,20 +30,20 @@ const posts = {
 				+ " some off campus resources like private counseling. I defiently think you should give it a try. I wish you the best luck, remember we are"
 				+ " all in this together. <3"
 			}
-		]
+		}
 	},
 	{
 		title: "Looking for tips with friends who have talked about self harm",
 		date: "2020-01-17",
 		message: "Hey, I have a friend who has been seeming off recently and mentioned they have contemplated self harm. Does anyone have any advice about" 
 		+" how I should approach them about this or who I should go to talk to?",
-		reply: [
+		reply: {
 			{
 				date: "2020-01-20",
 				message: "I recommend you contact their family and possibly a suicide prevention help line. I know this can be a hard decision to make" 
 				+ " if you're worried about breaking your friends trust but it is always best to seek help in my opinion!"
 			}
-		]
+		}
 	},
 	{
 		title:"Campus Awareness",
