@@ -1,5 +1,6 @@
 export const posts = [
 	{
+		id: 0,
 		title: "My Friend is Struggling with Depression",
 		date: "2020-01-02",
 		message: "Hello, my friend is struggling with depression and I am wondering if anyone has any tips for how"
@@ -16,6 +17,7 @@ export const posts = [
 		]
 	},
 	{
+		id: 1,
 		title: "Tips for seeking advising",
 		date: "2020-01-05",
 		message: "I have been feeling down recently and am not sure if I want to seek help through my college campuses health services. Any tips?",
@@ -30,6 +32,7 @@ export const posts = [
 		]
 	},
 	{
+		id: 2,
 		title: "Looking for tips with friends who have talked about self harm",
 		date: "2020-01-17",
 		message: "Hey, I have a friend who has been seeming off recently and mentioned they have contemplated self harm. Does anyone have any advice about" 
@@ -43,6 +46,7 @@ export const posts = [
 		]
 	},
 	{
+		id: 3,
 		title:"Campus Awareness",
 		date:"2020-02-05",
 		message:"Hello friends, I go to Generic University and we are hoasting a suicide prevention and general mental health awareness assembly at our student union tomorrow." 

@@ -11,31 +11,21 @@ export default function HeartToHeartScreen() {
   return (
     <View style={styles.container}>
         <Text style={styles.heartToHeart}>💓 to 💓</Text>
-        <View style={styles.postsContainer}>
-          <View style={styles.posts}>
           <FlatList
             data={posts}
-            renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+            renderItem={({item}) => <Post item={item}></Post>}
           />
-          </View>
-        </View>
     </View>
   );
 }
 
-function Posts({ title, date, message }) {
+function Post({ item }) {
   return (
-    <RectButton style={styles.debug}>
-      <View style={{ flexDirection: 'row' }}>
-        <View>
-          <Text style={styles.optionText}>{title}</Text>
-        </View>
-        <View style={styles.optionTextContainer}>
-          <Text style={styles.optionText}>{date}</Text>
-          <Text>{message}</Text>
-        </View>
-      </View>
-    </RectButton>
+     <View style={styles.posts}>
+      <Text>{item.title}</Text>
+      <Text>{item.date}</Text>
+      <Text>{item.message}</Text>
+     </View>
   );
 }
 
