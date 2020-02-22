@@ -3,28 +3,77 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import {TouchableOpacity, Linking, Platform } from 'react-native';
+
+const dialCall = () => {
+  let phoneNumber = 'telprompt:${1-800-273-8255}'
+  Linking.openURL(phoneNumber)
+}
+
+const dialCall2 = () => {
+  let phoneNumber = 'telprompt:${1−800−799−7233}'
+  Linking.openURL(phoneNumber)
+}
+
+const dialCall3 = () => {
+  let phoneNumber = 'telprompt:${1−800-787-3224}'
+  Linking.openURL(phoneNumber)
+}
 
 export default function ResourcesScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
+        icon="md-desktop"
+        label="National Suicide Preventon Lifeline"
+        onPress={() => WebBrowser.openBrowserAsync('https://suicidepreventionlifeline.org/')}
       />
 
-      <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
-      />
+      <View style={styles.MainContainer}>
+        <TouchableOpacity onPress={dialCall} activeOpacity={0.7} style={styles.button}>
+          <Text style={styles.TextStyle}>CALL NOW</Text>
+            </TouchableOpacity>
+              </View>
 
       <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
+        icon="md-desktop"
+        label="National Domestic Violence Hotline"
+        onPress={() => WebBrowser.openBrowserAsync('https://www.thehotline.org/')}
         isLastOption
       />
+
+       <OptionButton
+        icon="md-desktop"
+        label="National Domestic Violence Hotline En Español"
+        onPress={() => WebBrowser.openBrowserAsync('https://espanol.thehotline.org/')}
+        isLastOption
+      />
+
+      <View style={styles.MainContainer}>
+        <TouchableOpacity onPress={dialCall2} activeOpacity={0.7} style={styles.button}>
+          <Text style={styles.TextStyle}>CALL NOW</Text>
+            </TouchableOpacity>
+              </View>
+
+      <View style={styles.MainContainer}>
+        <TouchableOpacity onPress={dialCall3} activeOpacity={0.7} style={styles.button}>
+          <Text style={styles.TextStyle}>CALL NOW TTY</Text>
+            </TouchableOpacity>
+              </View>
+
+      <OptionButton
+        icon="md-desktop"
+        label="American Foundation for Suicide Preventon"
+        onPress={() => WebBrowser.openBrowserAsync('https://afsp.org/')}
+      />
+
+      <OptionButton
+        icon="md-desktop"
+        label="OASIS"
+        onPress={() => WebBrowser.openBrowserAsync('https://www.oasis-open.org/org')}
+      />
+
+
     </ScrollView>
   );
 }
@@ -47,7 +96,7 @@ function OptionButton({ icon, label, onPress, isLastOption }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fafafa',
+    backgroundColor: '#F6C2C9',
   },
   contentContainer: {
     paddingTop: 15,
@@ -62,6 +111,7 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: 0,
     borderColor: '#ededed',
+    marginTop: 10
   },
   lastOption: {
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -70,5 +120,27 @@ const styles = StyleSheet.create({
     fontSize: 15,
     alignSelf: 'flex-start',
     marginTop: 1,
+  },
+
+  //CALL BUTTON
+  MainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+    //marginBottom: 10
+  },
+  button: {
+ 
+    width: '80%',
+    padding: 6,
+    backgroundColor: '#F5AC41',
+    borderRadius: 7,
+  },
+ 
+  TextStyle: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
   },
 });
