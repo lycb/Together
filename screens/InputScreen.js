@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
-import { TextInput, Component } from 'react-native';
+import { TextInput, Component, Button  } from 'react-native';
 
 
 export default function InputScreen() {
@@ -24,6 +24,12 @@ export default function InputScreen() {
 			 />
 		</View>
 
+		<Button
+			onPress={() => {
+				alert('BUTTON PRESSED!!!!!!');
+		}}
+		title = "press me beech"
+		/>
 	</ScrollView>
   );
 }
