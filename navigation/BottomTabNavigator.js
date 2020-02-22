@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import HeartToHeartScreen from '../screens/HeartToHeartScreen';
+import ResourcesScreen from '../screens/ResourcesScreen';
+import UnsentLettersScreen from '../screens/UnsentLettersScreen';
 
 const BottomTab = createBottomTabNavigator();
-const INITIAL_ROUTE_NAME = 'Home';
+const INITIAL_ROUTE_NAME = 'HeartToHeart';
 
 export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
@@ -15,24 +16,32 @@ export default function BottomTabNavigator({ navigation, route }) {
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
-      <BottomTab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
-        options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
-        }}
-      />
+    <BottomTab.Screen
+    name="Heart To Heart"
+    component={HeartToHeartScreen}
+    options={{
+      title: 'Heart To Heart',
+      tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+    }}
+    />
+    <BottomTab.Screen
+    name="Unsent Letters"
+    component={UnsentLettersScreen}
+    options={{
+      title: 'Unsent Letters',
+      tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+    }}
+    />
+    <BottomTab.Screen
+    name="Resources"
+    component={ResourcesScreen}
+    options={{
+      title: 'Resources',
+      tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+    }}
+    />
     </BottomTab.Navigator>
-  );
+    );
 }
 
 function getHeaderTitle(route) {
@@ -40,8 +49,8 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case 'Home':
-      return 'How to get started';
+    return 'How to get started';
     case 'Links':
-      return 'Links to learn more';
+    return 'Links to learn more';
   }
 }
