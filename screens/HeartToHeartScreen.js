@@ -11,15 +11,21 @@ export default function HeartToHeartScreen() {
   return (
     <View style={styles.container}>
         <Text style={styles.heartToHeart}>💓 to 💓</Text>
-        <View style={styles.postsContainer}>
-          <View style={styles.posts}>
-            <FlatList
-              data={posts}
-              renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
-            />
-          </View>
-        </View>
+          <FlatList
+            data={posts}
+            renderItem={({item}) => <Post item={item}></Post>}
+          />
     </View>
+  );
+}
+
+function Post({ item }) {
+  return (
+     <View style={styles.posts}>
+      <Text>{item.title}</Text>
+      <Text>{item.date}</Text>
+      <Text>{item.message}</Text>
+     </View>
   );
 }
 
