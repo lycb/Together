@@ -1,25 +1,41 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
+import { posts } from '../mock_data/heart_to_heart_post';
 
 export default function HeartToHeartScreen() {
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        
-      </ScrollView>
+        <Text style={styles.heartToHeart}>💓 to 💓</Text>
+        <View style={styles.postsContainer}>
+          <View style={styles.posts}>
+          <FlatList
+            data={posts}
+            renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+          />
+          </View>
+        </View>
+    </View>
+  );
+}
 
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
-        <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
+function Posts({ title, date, message }) {
+  return (
+    <RectButton style={styles.debug}>
+      <View style={{ flexDirection: 'row' }}>
+        <View>
+          <Text style={styles.optionText}>{title}</Text>
+        </View>
+        <View style={styles.optionTextContainer}>
+          <Text style={styles.optionText}>{date}</Text>
+          <Text>{message}</Text>
         </View>
       </View>
-    </View>
+    </RectButton>
   );
 }
 
@@ -63,7 +79,17 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#A5EAFB',
+  },
+  debug: {
+    backgroundColor: 'red',
+  },
+  posts: {
+    backgroundColor: '#FDE059',
+    margin: 10
+  },
+  postsContainer: {
+    margin: 10,
   },
   developmentModeText: {
     marginBottom: 20,
@@ -102,11 +128,11 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     paddingHorizontal: 4,
   },
-  getStartedText: {
-    fontSize: 17,
+  heartToHeart: {
+    fontSize: 30,
     color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
+    textAlign: 'left',
+    marginLeft: 20
   },
   tabBarInfoContainer: {
     position: 'absolute',
