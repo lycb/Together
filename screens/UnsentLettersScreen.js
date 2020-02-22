@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
+import { posts } from '../mock_data/unsent_Letters';
 
 export default function UnsentLettersScreen() {
   return (
@@ -12,7 +13,10 @@ export default function UnsentLettersScreen() {
         <Text style={styles.unsentLetters}> Unsent Letters </Text>
         <View style={styles.postsContainer}>
           <View style={styles.posts}>
-
+            <FlatList
+              data={posts}
+              renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}
+            />
           </View>
         </View>
       </ScrollView>
