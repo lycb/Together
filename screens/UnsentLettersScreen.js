@@ -9,7 +9,12 @@ export default function UnsentLettersScreen() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        
+        <Text style={styles.unsentLetters}> Unsent Letters </Text>
+        <View style={styles.postsContainer}>
+          <View style={styles.posts}>
+
+          </View>
+        </View>
       </ScrollView>
 
       
@@ -57,7 +62,7 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#dbc2fb',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -68,6 +73,9 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+  },
+  postsContainer: {
+    margin: 10,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -96,11 +104,16 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     paddingHorizontal: 4,
   },
+  unsentLetters: {
+    fontSize: 30,
+    color: 'rgba(96,100,109, 1)',
+    textAlign: 'center'
+  },
   getStartedText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   tabBarInfoContainer: {
     position: 'absolute',
