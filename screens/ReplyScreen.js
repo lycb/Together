@@ -16,7 +16,7 @@ import * as WebBrowser from "expo-web-browser";
 import { StackActions } from '@react-navigation/native';
 
 export default function ReplyScreen({ route, navigation }) {
-  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+  navigation.setOptions({ headerTitle: ':D;', headerStyle: {
             backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
             fontWeight: 'bold',
           }});
@@ -59,7 +59,10 @@ export default function ReplyScreen({ route, navigation }) {
               m.length == 1 && (m = "0" + m);
               var yyyymmdd = y + "-" + m + "-" + d;
               newPost(yyyymmdd, value2);
-              navigation.dispatch(StackActions.pop(1));
+               navigation.navigate("Post", {item: item});
+               // navigation.dispatch(StackActions.push("Post", {item: item}));
+               // navigation.replace("Post", {item: item});
+              // navigation.replace(navigation.dispatch(StackActions.pop(1)), {item: {}});
             }}
             title="Submit"
           />
