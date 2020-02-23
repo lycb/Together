@@ -70,10 +70,10 @@ const styles = StyleSheet.create({
   },
   unsentLetters: {
     fontSize: 40,
-    color: "rgb(104, 34, 201)",
-    textAlign: "left",
+    color: 'rgb(104, 34, 201)',
+    textAlign: 'left',
     marginLeft: 20,
-    fontFamily: "space-mono"
+    fontFamily: 'space-mono',
   },
   title: {
     color: "#1176F6",

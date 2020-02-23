@@ -24,7 +24,7 @@ export default function ResourcesScreen() {
   return (
 
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <Text style={styles.screen_title}>Resources</Text>
+      <Text style={styles.screenTitle}>Resources</Text>
 
       <OptionButton
         icon="md-desktop"
@@ -98,6 +98,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F6C2C9',
+  },
+  screenTitle: {
+    fontSize: 40,
+    color: '#ff4faf',
+    textAlign: 'left',
+    marginLeft: 20,
+    fontFamily: 'space-mono',
   },
   contentContainer: {
     paddingTop: 15,
