@@ -148,7 +148,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '0',
+		id: '8',
 		title: "For my service dog, who passed away",
 		date: "2020-02-22",
 		message: "You were the first family I ever had who didn't abuse me. You loved me, even when I hated myself and was fed up with you peeing on my carpet. You stopped my suicide attempts. You put your little chin on me every time I felt like there was no one in the world who loved me. I never had to pull you close to me when I was upset, you just knew that I needed you."
@@ -167,7 +167,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '1',
+		id: '9',
 		title: "Don't settle.",
 		date: "2020-02-22",
 		message: "You're selling yourself short."
@@ -186,7 +186,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '2',
+		id: '10',
 		title: "I don't know how to let you go.",
 		date: "2020-02-21",
 		message: "I can’t keep chasing you. You don’t want my love, all I’m doing is destroying myself, my heart hurts and my soul feels empty. If you loved me you’d want to spend time with me, you’d make the effort no matter how hard it is."
@@ -200,7 +200,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '3',
+		id: '11',
 		title: "Today was tough",
 		date: "2020-02-21",
 		message:"Hi baby,\n"
@@ -219,7 +219,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '4',
+		id: '12',
 		title: "For my service dog, who passed away",
 		date: "2020-02-22",
 		message: "You were the first family I ever had who didn't abuse me. You loved me, even when I hated myself and was fed up with you peeing on my carpet. You stopped my suicide attempts. You put your little chin on me every time I felt like there was no one in the world who loved me. I never had to pull you close to me when I was upset, you just knew that I needed you."
@@ -238,7 +238,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '5',
+		id: '13',
 		title: "Don't settle.",
 		date: "2020-02-22",
 		message: "You're selling yourself short."
@@ -257,7 +257,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '6',
+		id: '14',
 		title: "I don't know how to let you go.",
 		date: "2020-02-21",
 		message: "I can’t keep chasing you. You don’t want my love, all I’m doing is destroying myself, my heart hurts and my soul feels empty. If you loved me you’d want to spend time with me, you’d make the effort no matter how hard it is."
@@ -271,7 +271,7 @@ export const posts = [
 		]
 	},
 	{
-		id: '7',
+		id: '15',
 		title: "Today was tough",
 		date: "2020-02-21",
 		message:"Hi baby,\n"
