@@ -13,7 +13,10 @@ export default function BottomTabNavigator2({ navigation, route }) {
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
 
-   navigation.setOptions({ headerTitle: '' });
+   navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>

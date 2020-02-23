@@ -17,7 +17,10 @@ import { MonoText } from "../components/StyledText";
 import { letters } from "../mock_data/unsent_Letters";
 
 export default function UnsentLettersScreen({ navigation }) {
-  navigation.setOptions({ headerTitle: "" });
+  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
   return (
     <View style={styles.container}>
       
@@ -36,7 +39,6 @@ export default function UnsentLettersScreen({ navigation }) {
         renderItem={({ item }) => (
           <Post item={item} navigation={navigation}></Post>
         )}
-        inverted={true}
       />
     </View>
   );

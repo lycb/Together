@@ -11,6 +11,10 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function HomeScreen({ navigation }) {
+  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
   return (
     <View style={styles.container}>
       <View style={styles.centerized}>

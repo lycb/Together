@@ -21,7 +21,10 @@ const dialCall3 = () => {
 };
 
 export default function ResourcesScreen({ navigation }) {
-  navigation.setOptions({ headerTitle: "" });
+  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
   return (
     <View
       style={styles.container}

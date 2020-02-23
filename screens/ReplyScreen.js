@@ -16,7 +16,10 @@ import * as WebBrowser from "expo-web-browser";
 import { StackActions } from '@react-navigation/native';
 
 export default function ReplyScreen({ route, navigation }) {
-  navigation.setOptions({ headerTitle: '' });
+  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
   const { item } = route.params;
   const [value2, onChangeText2] = React.useState("");
 
