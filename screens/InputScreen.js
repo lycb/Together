@@ -12,21 +12,27 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import * as WebBrowser from "expo-web-browser";
-import posts from "../mock_data/heart_to_heart_post";
+import { posts, setPosts } from "../mock_data/heart_to_heart_post";
 
-const newPost = (title, date, message) => {
-  const newObj = {
-    title,
-    date,
-    message,
-    reply: []
-  };
-  posts.push(newObj);
-};
+
 
 export default function InputScreen() {
   const [value, onChangeText] = React.useState("UWUOWO");
   const [value2, onChangeText2] = React.useState("UWUOWO2");
+
+  const newPost = (title, date, message) => {
+    const new_id = posts.length
+    const newObj = {
+    new_id,
+    title,
+    date,
+    message,
+    reply: []
+    };
+    posts.push(newObj);
+    setPosts(posts);
+  };
+
   return (
     <ScrollView
       style={styles.container}
@@ -58,8 +64,9 @@ export default function InputScreen() {
           m.length == 1 && (m = "0" + m);
           var yyyymmdd = y + "-" + m + "-" + d;
           alert(yyyymmdd);
+          newPost(value, yyyymmdd, value2)
         }}
-        title="press me beech"
+        title="Submit"
       />
     </ScrollView>
   );
