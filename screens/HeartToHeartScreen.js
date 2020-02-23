@@ -23,18 +23,19 @@ export default function HeartToHeartScreen({ navigation }) {
 
 function Post({ item, navigation }) {
   return (
-     <View style={styles.posts}>
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('Post', {item: item}) } 
-        activeOpacity={0.7} 
-        style={styles.button}>
-       <View style={styles.postWrapper}>
-        <Text>{item.title}</Text>
-        <Text>{item.date}</Text>
-        <Text>{item.message}</Text>
-       </View>
+    <View style={styles.posts}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Post", { item: item })}
+        activeOpacity={0.7}
+        style={styles.button}
+      >
+        <View style={styles.postWrapper}>
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.date}>{item.date}</Text>
+          <Text style={styles.body}>{item.message}</Text>
+        </View>
       </TouchableOpacity>
-     </View>
+    </View>
   );
 }
 
@@ -57,46 +58,10 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
     borderRadius: 12,
+    paddingLeft:10,
   },
   postWrapper: {
     margin: 10,
-  },
-  developmentModeText: {
-    marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
-    fontSize: 14,
-    lineHeight: 19,
-    textAlign: 'center',
-  },
-  contentContainer: {
-    paddingTop: 30,
-  },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  welcomeImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
-  },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
   },
   heartToHeart: {
     fontSize: 50,
@@ -105,43 +70,17 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontFamily: 'space-mono',
   },
-  tabBarInfoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
+  title: {
+    color: "#1176F6",
+    fontSize: 20,
+    fontFamily: "space-mono",
   },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
+  date: {
+    fontSize: 15,
+    fontFamily: "open-sans-bold"
   },
-  navigationFilename: {
-    marginTop: 5,
-  },
-  helpContainer: {
-    marginTop: 15,
-    alignItems: 'center',
-  },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    fontSize: 14,
-    color: '#2e78b7',
+  body: {
+    fontSize: 15,
+    fontFamily: "gothic",
   },
 });
