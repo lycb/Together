@@ -23,18 +23,19 @@ export default function HeartToHeartScreen({ navigation }) {
 
 function Post({ item, navigation }) {
   return (
-     <View style={styles.posts}>
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('Post', {item: item}) } 
-        activeOpacity={0.7} 
-        style={styles.button}>
-       <View style={styles.postWrapper}>
-        <Text>{item.title}</Text>
-        <Text>{item.date}</Text>
-        <Text>{item.message}</Text>
-       </View>
+    <View style={styles.posts}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Post", { item: item })}
+        activeOpacity={0.7}
+        style={styles.button}
+      >
+        <View style={styles.postWrapper}>
+          <Text>{item.title}</Text>
+          <Text>{item.date}</Text>
+          <Text>{item.message}</Text>
+        </View>
       </TouchableOpacity>
-     </View>
+    </View>
   );
 }
 

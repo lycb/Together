@@ -28,7 +28,7 @@ export default function PostScreen({ route, navigation }) {
       </View>
       <FlatList
         data={item.reply}
-        renderItem={({item}) => <Reply item={item}></Reply>}
+        renderItem={({ item }) => <Reply item={item}></Reply>}
         keyExtractor={item => item.id}
       />
     </View>
@@ -38,10 +38,10 @@ export default function PostScreen({ route, navigation }) {
 function Reply({ item }) {
   return (
     <View style={styles.reply}>
-        <View style={styles.postWrapper}>
-          <Text style={styles.replyDate}>{item.date}</Text>
-          <Text style={styles.replyBody}>{item.message}</Text>
-        </View>
+      <View style={styles.postWrapper}>
+        <Text style={styles.replyDate}>{item.date}</Text>
+        <Text style={styles.replyBody}>{item.message}</Text>
+      </View>
     </View>
   );
 }
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     color: "#1176F6",
     fontSize: 30,
     fontFamily: "space-mono",
-    paddingBottom: 30,
+    paddingBottom: 30
   },
   replyDate: {
     fontSize: 15,
@@ -72,11 +72,11 @@ const styles = StyleSheet.create({
   },
   replyBody: {
     fontSize: 15,
-    fontFamily: "gothic",
+    fontFamily: "gothic"
   },
   body: {
     fontSize: 20,
-    fontFamily: "gothic",
+    fontFamily: "gothic"
   },
   button: {
     display: "flex",
@@ -84,24 +84,24 @@ const styles = StyleSheet.create({
     marginLeft: 325,
     backgroundColor: "#FDE059",
     width: 75,
-    textAlign: 'center',
+    textAlign: "center",
     padding: 5,
     height: 50,
-    borderRadius: 12,
+    borderRadius: 12
   },
   backButton: {
     display: "flex",
     flexWrap: "wrap",
     width: 75,
-    textAlign: 'center',
+    textAlign: "center",
     padding: 5,
     height: 50,
-    borderRadius: 12,
+    borderRadius: 12
   },
   reply: {
     backgroundColor: "#F5AC41",
     borderRadius: 12,
-    margin: 10,
+    margin: 10
   },
   posts: {
     backgroundColor: "#FDE059",
@@ -111,5 +111,5 @@ const styles = StyleSheet.create({
   },
   postWrapper: {
     margin: 10
-  },
+  }
 });
