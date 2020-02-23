@@ -18,6 +18,7 @@ export default function PostScreen({ route, navigation }) {
   const { item } = route.params;
   return (
     <View style={styles.container}>
+    <ScrollView>
       <View style={styles.posts}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.date}>{item.date}</Text>
@@ -26,6 +27,7 @@ export default function PostScreen({ route, navigation }) {
       <View style={styles.button}>
         <Button title="Reply" />
       </View>
+      </ScrollView>
       <FlatList
         data={item.reply}
         renderItem={({ item }) => <Reply item={item}></Reply>}
