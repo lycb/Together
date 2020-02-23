@@ -18,9 +18,6 @@ export default function PostScreen({ route, navigation }) {
   const { item } = route.params;
   return (
     <View style={styles.container}>
-      <View style={styles.backButton}>
-        <Button onPress={() => navigation.goBack()} title="< Back" />
-      </View>
       <View style={styles.posts}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.date}>{item.date}</Text>
