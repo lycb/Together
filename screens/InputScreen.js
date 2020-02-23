@@ -40,13 +40,13 @@ export default function InputScreen() {
         <View style={styles.newPost}>
           <Text style={styles.header}>Title</Text>
           <TextInput
-            style={styles.txtInputTitle}
+            style={styles.txtInput}
             onChangeText={text => onChangeText(text)}
             value={value}
           />
           <Text style={styles.header}>Message</Text>
           <TextInput
-            style={styles.txtInputMessage}
+            style={styles.txtInput}
             onChangeText={text => onChangeText2(text)}
             value={value2}
           />
@@ -100,26 +100,17 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingLeft: 10
   },
-  txtInputTitle: {
+  txtInput: {
     height: 40,
     borderColor: "gray",
     borderWidth: 1,
     margin: 20,
     backgroundColor: "#fff",
     padding: 10,
-    borderRadius: 12
-  },
-  txtInputMessage: {
-    height: 40,
-    borderColor: "gray",
-    borderWidth: 1,
-    margin: 20,
-    padding: 10,
-    backgroundColor: "#fff",
     borderRadius: 12
   },
   screenTitle: {
-    fontSize: 40,
+    fontSize: 30,
     color: "#31bc72",
     textAlign: "left",
     marginLeft: 20,

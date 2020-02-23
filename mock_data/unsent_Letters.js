@@ -13,8 +13,14 @@ export const posts = [
 		+ "\n u/olieolieoxenfree",
 		reply: [
 			{
+				id: '01',
 				date: "2020-02-22",
 				message: "Beautiful story, sorry for your loss of your service dog."
+			},
+			{
+				id: '02',
+				date: "2020-02-22",
+				message: "Thank you for these kind words, I needed to hear something like this."
 			}
 		]
 	},

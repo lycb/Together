@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6C2C9',
   },
   screenTitle: {
-    fontSize: 40,
+    fontSize: 30,
     color: '#ff4faf',
     textAlign: 'left',
     marginLeft: 20,
@@ -136,20 +136,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 10,
-    //marginBottom: 10
   },
   button: {
- 
     width: '80%',
     padding: 6,
-    backgroundColor: '#F5AC41',
+    backgroundColor: '#FDE059',
     borderRadius: 7,
   },
  
   TextStyle: {
-    color: '#fff',
+    color: '#ff4faf',
     fontSize: 18,
     textAlign: 'center',
+    fontFamily: 'space-mono',
   },
     screen_title: {
     fontSize: 45,

@@ -32,7 +32,7 @@ function Post({ item, navigation }) {
   return (
     <View style={styles.posts}>
       <TouchableOpacity
-        onPress={() => navigation.navigate("Resources")}
+        onPress={() => navigation.navigate("Post", { item: item })}
         activeOpacity={0.7}
         style={styles.button}
       >
@@ -69,10 +69,10 @@ const styles = StyleSheet.create({
     margin: 10
   },
   unsentLetters: {
-    fontSize: 40,
+    fontSize: 30,
     color: 'rgb(104, 34, 201)',
     textAlign: 'left',
-    marginLeft: 20,
+    marginLeft: 5,
     fontFamily: 'space-mono',
   },
   title: {

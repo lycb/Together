@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   heartToHeart: {
-    fontSize: 40,
+    fontSize: 30,
     color: '#1176F6',
     textAlign: 'left',
     marginLeft: 20,
