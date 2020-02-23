@@ -6,24 +6,26 @@ import * as WebBrowser from 'expo-web-browser';
 import { MonoText } from '../components/StyledText';
 import { posts } from '../mock_data/unsent_Letters';
 
-export default function UnsentLettersScreen() {
+export default function UnsentLettersScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Text style={styles.unsentLetters}> Unsent Letters </Text>
             <FlatList
               data={posts}
-              renderItem={({item}) => <Post item={item}></Post>}
+              renderItem={({item}) => <Post item={item} navigation={navigation}></Post>}
             />
     </View>
   );
 }
 
-function Post({ item }) {
+function Post({ item, navigation }) {
   return (
      <View style={styles.posts}> 
+     <TouchableOpacity onPress={() => navigation.navigate('Resources')} activeOpacity={0.7} style={styles.button}>
       <Text>{item.title}</Text>
       <Text>{item.date}</Text>
       <Text style={styles.message}>{item.message}</Text>
+     </TouchableOpacity>
      </View>
   );
 }
@@ -40,12 +42,18 @@ const styles = StyleSheet.create({
   },
   message: {
     height: 70,
-    width: 350,
+    width: 375,
   },
   posts: {
     backgroundColor: '#FDE059',
-    margin: 20,
-    height: 100
+    margin: 10,
+    padding: 10,
+    paddingTop:20,
+    height: 150,
+    borderRadius: 12,
+  },
+    postWrapper: {
+    margin: 10,
   },
   developmentModeText: {
     marginBottom: 20,
@@ -88,9 +96,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   unsentLetters: {
-    fontSize: 30,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center'
+    fontSize: 40,
+    color: 'rgb(104, 34, 201)',
+    textAlign: 'left',
+    marginLeft: 20,
+    fontFamily: 'space-mono',
   },
   getStartedText: {
     fontSize: 17,
