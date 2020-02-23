@@ -13,6 +13,7 @@ import ResourcesScreen from './screens/ResourcesScreen';
 import UnsentLettersScreen from './screens/UnsentLettersScreen';
 import InputScreen from './screens/InputScreen';
 import PostScreen from './screens/PostScreen';
+import ReplyScreen from './screens/ReplyScreen';
 import useLinking from './navigation/useLinking';
 
 const Stack = createStackNavigator();
@@ -69,6 +70,7 @@ export default function App(props) {
             <Stack.Screen name="UnsentLetters" component={UnsentLettersScreen} />
             <Stack.Screen name="Input" component={InputScreen} />
             <Stack.Screen name="Post" component={PostScreen} />
+            <Stack.Screen name="Reply" component={ReplyScreen} />
           </Stack.Navigator>
         </SafeAreaView>
       </NavigationContainer>
