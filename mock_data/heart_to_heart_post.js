@@ -150,7 +150,3 @@ export let posts = [
 		]
 	}
 ]
-
-export const setPosts = (value) => {
-	posts = value;
-}
