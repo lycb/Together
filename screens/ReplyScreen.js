@@ -60,9 +60,6 @@ export default function ReplyScreen({ route, navigation }) {
               var yyyymmdd = y + "-" + m + "-" + d;
               newPost(yyyymmdd, value2);
                navigation.navigate("Post", {item: item});
-               // navigation.dispatch(StackActions.push("Post", {item: item}));
-               // navigation.replace("Post", {item: item});
-              // navigation.replace(navigation.dispatch(StackActions.pop(1)), {item: {}});
             }}
             title="Submit"
           />
