@@ -12,22 +12,19 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import * as WebBrowser from "expo-web-browser";
-import { posts } from "../mock_data/heart_to_heart_post";
 
-export default function InputScreen() {
-  const [value, onChangeText] = React.useState("");
+export default function ReplyScreen({ route, navigation }) {
+  const { item } = route.params;
   const [value2, onChangeText2] = React.useState("");
 
-  const newPost = (title, date, message) => {
-    const new_id = posts.length;
+  const newPost = (date, message) => {
+    const new_id = item.reply.length;
     const newObj = {
       new_id,
-      title,
       date,
       message,
-      reply: []
     };
-    posts.push(newObj);
+    item.reply.push(newObj);
   };
 
   return (
@@ -36,15 +33,8 @@ export default function InputScreen() {
       contentContainerStyle={styles.contentContainer}
     >
       <View style={styles.container}>
-        <Text style={styles.screenTitle}>New Post</Text>
         <View style={styles.newPost}>
-          <Text style={styles.header}>Title</Text>
-          <TextInput
-            style={styles.txtInput}
-            onChangeText={text => onChangeText(text)}
-            value={value}
-          />
-          <Text style={styles.header}>Message</Text>
+          <Text style={styles.header}>Reply</Text>
           <TextInput
             style={styles.txtInput}
             onChangeText={text => onChangeText2(text)}
@@ -62,8 +52,9 @@ export default function InputScreen() {
               d.length == 1 && (d = "0" + d);
               m.length == 1 && (m = "0" + m);
               var yyyymmdd = y + "-" + m + "-" + d;
-              alert("New Post Submitted.");
-              newPost(value, yyyymmdd, value2);
+              alert("Reply Submitted.");
+              newPost(yyyymmdd, value2);
+              navigation.navigate("Post", {item: item})
             }}
             title="Submit"
           />
@@ -76,7 +67,7 @@ export default function InputScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7de88b"
+    backgroundColor: "#fc9b5a"
   },
   button: {
     marginTop: 15,
@@ -87,7 +78,7 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 30,
-    color: "#31bc72",
+    color: "#fc751b",
     textAlign: "left",
     marginLeft: 20,
     fontFamily: "space-mono"

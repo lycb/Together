@@ -17,23 +17,24 @@ import { MonoText } from "../components/StyledText";
 export default function PostScreen({ route, navigation }) {
   const { item } = route.params;
   return (
-    <View style={styles.container}>
-    <ScrollView>
+    //<View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.posts}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.date}>{item.date}</Text>
         <Text style={styles.body}>{item.message}</Text>
       </View>
       <View style={styles.button}>
-        <Button title="Reply" />
+        <Button title="Reply" onPress={() => navigation.navigate("Reply", { item: item, })}
+        />
       </View>
-      </ScrollView>
       <FlatList
         data={item.reply}
         renderItem={({ item }) => <Reply item={item}></Reply>}
         keyExtractor={item => item.id}
       />
-    </View>
+      </ScrollView>
+    //</View>
   );
 }
 
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     flex: 1,
-    backgroundColor: "#A5EAFB"
+    backgroundColor: "#c9fc5a"
   },
   title: {
     color: "#1176F6",

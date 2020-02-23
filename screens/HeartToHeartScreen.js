@@ -25,7 +25,7 @@ function Post({ item, navigation }) {
   return (
     <View style={styles.posts}>
       <TouchableOpacity
-        onPress={() => navigation.navigate("Post", { item: item })}
+        onPress={() => navigation.navigate("Post", { item: item, })}
         activeOpacity={0.7}
         style={styles.button}
       >
