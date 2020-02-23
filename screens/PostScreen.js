@@ -27,12 +27,12 @@ export default function PostScreen({ route, navigation }) {
       <View style={styles.button}>
         <Button title="Reply" />
       </View>
+      </ScrollView>
       <FlatList
         data={item.reply}
         renderItem={({ item }) => <Reply item={item}></Reply>}
         keyExtractor={item => item.id}
       />
-    </ScrollView>
     </View>
   );
 }
