@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
 import { Platform, StatusBar, StyleSheet, View, SafeAreaView } from 'react-native';
 import { SplashScreen } from 'expo';
@@ -5,7 +6,6 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import HomeScreen from './screens/HomeScreen';
 import HeartToHeartScreen from './screens/HeartToHeartScreen';
@@ -53,9 +53,9 @@ export default function App(props) {
     return null;
   } else {
     return (
-      <SafeAreaView style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
+      <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
+        <SafeAreaView style={styles.container}>
+          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
             <Stack.Screen name="Home" component={HomeScreen} />
@@ -63,8 +63,8 @@ export default function App(props) {
             <Stack.Screen name="Resources" component={ResourcesScreen} />
             <Stack.Screen name="UnsentLetters" component={UnsentLettersScreen} />
           </Stack.Navigator>
-        </NavigationContainer>
-      </SafeAreaView>
+        </SafeAreaView>
+      </NavigationContainer>
     );
   }
 }
@@ -74,3 +74,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
