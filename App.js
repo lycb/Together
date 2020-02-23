@@ -12,6 +12,7 @@ import HeartToHeartScreen from './screens/HeartToHeartScreen';
 import ResourcesScreen from './screens/ResourcesScreen';
 import UnsentLettersScreen from './screens/UnsentLettersScreen';
 import InputScreen from './screens/InputScreen';
+import PostScreen from './screens/PostScreen';
 import useLinking from './navigation/useLinking';
 
 const Stack = createStackNavigator();
@@ -37,6 +38,9 @@ export default function App(props) {
           'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
           'lacquer': require('./assets/fonts/Lacquer/Lacquer-Regular.ttf'),
           'indie-flower': require('./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf'),
+          'gothic': require('./assets/fonts/Didact_Gothic/DidactGothic-Regular.ttf'),
+          'open-sans-regular': require('./assets/fonts/Open_Sans/OpenSans-Regular.ttf'),
+          'open-sans-bold': require('./assets/fonts/Open_Sans/OpenSans-Bold.ttf'),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -64,6 +68,7 @@ export default function App(props) {
             <Stack.Screen name="Resources" component={ResourcesScreen} />
             <Stack.Screen name="UnsentLetters" component={UnsentLettersScreen} />
             <Stack.Screen name="Input" component={InputScreen} />
+            <Stack.Screen name="Post" component={PostScreen} />
           </Stack.Navigator>
         </SafeAreaView>
       </NavigationContainer>

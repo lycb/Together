@@ -25,7 +25,7 @@ function Post({ item, navigation }) {
   return (
      <View style={styles.posts}>
       <TouchableOpacity 
-        onPress={() => navigation.navigate('Input') } 
+        onPress={() => navigation.navigate('Post', {item: item}) } 
         activeOpacity={0.7} 
         style={styles.button}>
        <View style={styles.postWrapper}>
@@ -54,6 +54,8 @@ const styles = StyleSheet.create({
   posts: {
     backgroundColor: '#FDE059',
     margin: 10,
+    paddingTop: 15,
+    paddingBottom: 15,
     borderRadius: 12,
   },
   postWrapper: {
