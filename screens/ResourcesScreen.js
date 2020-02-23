@@ -52,7 +52,7 @@ export default function ResourcesScreen() {
 
         <View style={styles.linksWrapper}>
         <OptionButton
-          icon="md-desktop"
+          icon="md-rose"
           label="National Domestic Violence Hotline"
           onPress={() =>
             WebBrowser.openBrowserAsync("https://www.thehotline.org/")
@@ -61,7 +61,7 @@ export default function ResourcesScreen() {
         />
 
         <OptionButton
-          icon="md-desktop"
+          icon="md-rose"
           label="National Domestic Violence Hotline En Español"
           onPress={() =>
             WebBrowser.openBrowserAsync("https://espanol.thehotline.org/")
@@ -92,7 +92,7 @@ export default function ResourcesScreen() {
 
         <View style={styles.linksWrapper}>
         <OptionButton
-          icon="md-desktop"
+          icon="md-rose"
           label="American Foundation for Suicide Preventon"
           onPress={() => WebBrowser.openBrowserAsync("https://afsp.org/")}
         />
@@ -100,7 +100,7 @@ export default function ResourcesScreen() {
 
         <View style={styles.linksWrapper}>
         <OptionButton
-          icon="md-desktop"
+          icon="md-rose"
           label="OASIS"
           onPress={() =>
             WebBrowser.openBrowserAsync("https://www.oasis-open.org/org")
@@ -154,9 +154,11 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   optionText: {
-    fontSize: 15,
+    fontSize: 20,
     alignSelf: "flex-start",
-    marginTop: 1
+    marginTop: 1,
+    color: "#ffd3e5",
+    fontFamily: "open-sans-bold"
   },
 
   //CALL BUTTON
@@ -170,7 +172,7 @@ const styles = StyleSheet.create({
     width: "80%",
     marginLeft:40,
     padding: 10,
-    backgroundColor: "#fff",
+    backgroundColor: "#ff87bb",
     borderRadius: 7,
     marginBottom:20,
   },
