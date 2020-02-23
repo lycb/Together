@@ -4,6 +4,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HeartToHeartScreen from '../screens/HeartToHeartScreen';
 import ResourcesScreen from '../screens/ResourcesScreen';
 import UnsentLettersScreen from '../screens/UnsentLettersScreen';
+import InputScreen from '../screens/InputScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'HeartToHeart';
@@ -40,6 +41,16 @@ export default function BottomTabNavigator({ navigation, route }) {
       tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-bookmark" />,
     }}
     />
+
+    <BottomTab.Screen
+    name="Input"
+    component={InputScreen}
+    options={{
+      title: 'Input',
+      tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+    }}
+    />
+
     </BottomTab.Navigator>
     );
 }
