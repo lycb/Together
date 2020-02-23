@@ -49,7 +49,8 @@ export default function App(props) {
           "indie-flower": require("./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf"),
           gothic: require("./assets/fonts/Didact_Gothic/DidactGothic-Regular.ttf"),
           "open-sans-regular": require("./assets/fonts/Open_Sans/OpenSans-Regular.ttf"),
-          "open-sans-bold": require("./assets/fonts/Open_Sans/OpenSans-Bold.ttf")
+          "open-sans-bold": require("./assets/fonts/Open_Sans/OpenSans-Bold.ttf"),
+          "open-sans-light-italic": require("./assets/fonts/Open_Sans/OpenSans-LightItalic.ttf")
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
