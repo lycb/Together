@@ -15,7 +15,12 @@ export default function BottomTabNavigator({ navigation, route }) {
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
 
-   navigation.setOptions({ headerTitle: '' });
+   //Maybe do logo here :
+   navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
+
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
@@ -24,7 +29,7 @@ export default function BottomTabNavigator({ navigation, route }) {
     component={HeartToHeartScreen}
     options={{
       title: 'Heart To Heart',
-      headerTitle: 'together;',
+      backgroundColor: '#f5ac41',
       tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-heart" />,
     }}
     />
