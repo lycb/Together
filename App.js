@@ -11,6 +11,7 @@ import HomeScreen from './screens/HomeScreen';
 import HeartToHeartScreen from './screens/HeartToHeartScreen';
 import ResourcesScreen from './screens/ResourcesScreen';
 import UnsentLettersScreen from './screens/UnsentLettersScreen';
+import InputScreen from './screens/InputScreen';
 import useLinking from './navigation/useLinking';
 
 const Stack = createStackNavigator();
@@ -62,6 +63,7 @@ export default function App(props) {
             <Stack.Screen name="HeartToHeart" component={HeartToHeartScreen} />
             <Stack.Screen name="Resources" component={ResourcesScreen} />
             <Stack.Screen name="UnsentLetters" component={UnsentLettersScreen} />
+            <Stack.Screen name="Input" component={InputScreen} />
           </Stack.Navigator>
         </SafeAreaView>
       </NavigationContainer>
