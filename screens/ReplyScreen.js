@@ -4,6 +4,7 @@ import {
   Platform,
   StyleSheet,
   Text,
+  StatusBar,
   TouchableOpacity,
   View,
   TextInput,
@@ -12,8 +13,10 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import * as WebBrowser from "expo-web-browser";
+import { StackActions } from '@react-navigation/native';
 
 export default function ReplyScreen({ route, navigation }) {
+  navigation.setOptions({ headerTitle: '' });
   const { item } = route.params;
   const [value2, onChangeText2] = React.useState("");
 
@@ -52,9 +55,8 @@ export default function ReplyScreen({ route, navigation }) {
               d.length == 1 && (d = "0" + d);
               m.length == 1 && (m = "0" + m);
               var yyyymmdd = y + "-" + m + "-" + d;
-              alert("Reply Submitted.");
               newPost(yyyymmdd, value2);
-              navigation.navigate("Post", {item: item})
+              navigation.dispatch(StackActions.pop(1));
             }}
             title="Submit"
           />

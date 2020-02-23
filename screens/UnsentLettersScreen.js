@@ -5,24 +5,38 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  TouchableHighlight,
   View,
   FlatList
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
 import * as WebBrowser from "expo-web-browser";
 
 import { MonoText } from "../components/StyledText";
-import { posts } from "../mock_data/unsent_Letters";
+import { letters } from "../mock_data/unsent_Letters";
 
 export default function UnsentLettersScreen({ navigation }) {
+  navigation.setOptions({ headerTitle: "" });
   return (
     <View style={styles.container}>
-      <Text style={styles.unsentLetters}> Unsent Letters </Text>
+      
+
+      <View style={{ flexDirection: "row" }}>
+          <Text style={styles.unsentLetters}> Unsent Letters </Text>
+          <TouchableHighlight underlayColor="rgba(255, 255, 255, 0)" onPress={() => navigation.navigate("Input", {item: {}, screen: "UnsentLetters"})}>
+            <View style={styles.pen}>
+              <Ionicons name="md-create" size={40} color='rgb(104, 34, 201)' />
+            </View>
+          </TouchableHighlight>
+        </View>
+
       <FlatList
-        data={posts}
+        data={letters}
         renderItem={({ item }) => (
           <Post item={item} navigation={navigation}></Post>
         )}
+        inverted={true}
       />
     </View>
   );
@@ -45,7 +59,8 @@ function Post({ item, navigation }) {
 }
 
 UnsentLettersScreen.navigationOptions = {
-  header: null
+  header: null,
+  headerLeft: null
 };
 
 const styles = StyleSheet.create({
@@ -53,9 +68,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#dbc2fb"
   },
-  message: {
-    height: 70,
-    width: 300,
+  button: {
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+  pen: {
+    marginLeft: 65,
+    marginTop: 5,
   },
   posts: {
     backgroundColor: "#FDE059",

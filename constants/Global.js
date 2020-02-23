@@ -1,0 +1,2 @@
+let app;
+app = {} || app;

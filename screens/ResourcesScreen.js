@@ -20,7 +20,8 @@ const dialCall3 = () => {
   Linking.openURL(phoneNumber);
 };
 
-export default function ResourcesScreen() {
+export default function ResourcesScreen({ navigation }) {
+  navigation.setOptions({ headerTitle: "" });
   return (
     <View
       style={styles.container}
