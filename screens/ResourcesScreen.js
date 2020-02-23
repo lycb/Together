@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {TouchableOpacity, Linking, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
-import {TouchableOpacity, Linking, Platform } from 'react-native';
 
 const dialCall = () => {
   let phoneNumber = 'telprompt:${1-800-273-8255}'
@@ -22,7 +22,10 @@ const dialCall3 = () => {
 
 export default function ResourcesScreen() {
   return (
+
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <Text style={styles.screen_title}>Resources</Text>
+
       <OptionButton
         icon="md-desktop"
         label="National Suicide Preventon Lifeline"
@@ -72,8 +75,6 @@ export default function ResourcesScreen() {
         label="OASIS"
         onPress={() => WebBrowser.openBrowserAsync('https://www.oasis-open.org/org')}
       />
-
-
     </ScrollView>
   );
 }
@@ -142,5 +143,10 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     textAlign: 'center',
+  },
+    screen_title: {
+    fontSize: 45,
+    color: 'black',
+    textAlign: 'center'
   },
 });
