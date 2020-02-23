@@ -22,6 +22,9 @@ export default function HomeScreen({ navigation }) {
           source={require("../assets/images/Together.png")}
           style={styles.logo}
         />
+        <View style={styles.text}>
+          <Text style={styles.textStyle}t>Built by students who care about you and your mental health</Text>
+        </View>
         <View style={styles.buttonGroup}>
         <View style={styles.button}>
           <TouchableOpacity
@@ -39,6 +42,7 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.buttonThings}>I want to help</Text>
           </TouchableOpacity>
         </View>
+
         </View>
       </View>
     </View>
@@ -54,6 +58,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff"
   },
+  text: {
+    padding: 20,
+  },
+  textStyle: {
+    fontSize: 14,
+    fontFamily: "open-sans-light-italic",
+    color: "#7032ff",
+    textAlign: "center",
+  },
   buttonThings: {
     fontSize: 20,
     color: "#ef8700",
@@ -61,7 +74,7 @@ const styles = StyleSheet.create({
     fontFamily: "space-mono"
   },
   buttonGroup: {
-    marginTop: 50,
+    marginTop: 0,
   },
   centerized: {
     alignItems: "center",
