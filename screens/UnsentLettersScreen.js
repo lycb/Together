@@ -26,7 +26,7 @@ export default function UnsentLettersScreen({ navigation }) {
       
 
       <View style={{ flexDirection: "row" }}>
-          <Text style={styles.unsentLetters}> Unsent Letters </Text>
+          <Text style={styles.unsentLetters}> Reflections </Text>
           <TouchableHighlight underlayColor="rgba(255, 255, 255, 0)" onPress={() => navigation.navigate("Input", {item: {}, screen: "UnsentLetters"})}>
             <View style={styles.pen}>
               <Ionicons name="md-create" size={40} color='rgb(104, 34, 201)' />
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   pen: {
-    marginLeft: 65,
+    marginLeft: 140,
     marginTop: 5,
   },
   posts: {

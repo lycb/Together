@@ -34,10 +34,10 @@ export default function BottomTabNavigator({ navigation, route }) {
     }}
     />
     <BottomTab.Screen
-    name="Unsent Letters"
+    name="Reflections"
     component={UnsentLettersScreen}
     options={{
-      title: 'Unsent Letters',
+      title: 'Reflections',
       tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
     }}
     />
