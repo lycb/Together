@@ -1,4 +1,4 @@
-export const posts = [
+export const letters = [
 	{
 		id: '0',
 		title: "For my service dog, who passed away",

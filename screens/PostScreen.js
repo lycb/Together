@@ -15,6 +15,7 @@ import * as WebBrowser from "expo-web-browser";
 import { MonoText } from "../components/StyledText";
 
 export default function PostScreen({ route, navigation }) {
+  navigation.setOptions({ headerTitle: '' });
   const { item } = route.params;
   return (
     //<View style={styles.container}>
