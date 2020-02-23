@@ -18,7 +18,10 @@ import { posts } from "../mock_data/heart_to_heart_post";
 import SafeAreaView from "react-native-safe-area-view";
 
 export default function HeartToHeartScreen({ navigation }) {
-  navigation.setOptions({ headerTitle: "" });
+  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#A5EAFB" />
@@ -36,7 +39,6 @@ export default function HeartToHeartScreen({ navigation }) {
           renderItem={({ item }) => (
             <Post item={item} navigation={navigation}></Post>
           )}
-          inverted={true}
         />
 
       </View>

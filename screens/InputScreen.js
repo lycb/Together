@@ -17,7 +17,10 @@ import { letters } from "../mock_data/unsent_Letters";
 import { StackActions } from '@react-navigation/native';
 
 export default function InputScreen({ route, navigation }) {
-  navigation.setOptions({ headerTitle: "" });
+  navigation.setOptions({ headerTitle: 'together;', headerStyle: {
+            backgroundColor: '#f5ac41', }, headerTintColor: '#fff', headerTitleStyle: {
+            fontWeight: 'bold',
+          }});
   const { screen } = route.params;
   const [value, onChangeText] = React.useState("");
   const [value2, onChangeText2] = React.useState("");
